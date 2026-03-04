@@ -10,3 +10,5 @@ data/*
 *.parquet
 *.nc
 *.parquet
+tracmass_outputs_1/
+personal_projects_outputs/

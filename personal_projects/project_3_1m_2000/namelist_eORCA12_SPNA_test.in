@@ -9,12 +9,12 @@
         l_onestep = .TRUE.
 
         ! Describe filenames
-        physDataDir    = '/home/users/evanh/Tracmass_v7.1/5dfiles/',  ! directory of physical data (u,v,T,S,MLD,etc)
-        physPrefixForm = 'eORCA12_5d_',
-        dateformat     = 'YYYYMMDD'
-        tGridName      = '_grid_T',                           ! name of Tgrid, e.g. grid_T
-        uGridName      = '_grid_U',                           ! name of Ugrid
-        vGridName      = '_grid_V',                           ! name of Vgrid                                                ! suffix of files, e.g. ".nc"
+        physDataDir    = '/home/users/evanh/Tracmass_v7.1/1m_files_2000/',  ! directory of physical data (u,v,T,S,MLD,etc)
+        physPrefixForm = 'eORCA12_1m_',
+        dateformat     = 'YYYYMM'
+        tGridName      = '-2_grid_T',                           ! name of Tgrid, e.g. grid_T
+        uGridName      = '-2_grid_U',                           ! name of Ugrid
+        vGridName      = '-2_grid_V',                           ! name of Vgrid                                                ! suffix of files, e.g. ".nc"
 
         fileSuffix     = '.nc',
 
@@ -56,16 +56,16 @@
 
 &INIT_GRID_SUBDOMAIN
      l_subdom    = .TRUE.,                               ! Initialise subdomain
-     imindom     = 2700,                                  ! Eastern and western wall for subdomain
+     imindom     = 2400,                                  ! Eastern and western wall for subdomain
      imaxdom     = 3500,
-     jmindom     = 2550,                                  ! Southern and northern wall for subdomain
+     jmindom     = 2400,                                  ! Southern and northern wall for subdomain
      jmaxdom     = 3050,
 /
 
 &INIT_GRID_TIME
-     ngcm_step      = 5,                                ! time between two time levels
+     ngcm_step      = 1,                                ! time between two time levels
                                                         ! if ncgcm_unit = 5, then ngcm_step = 3 means 3 months
-     ngcm_unit      = 4,                                ! units of ngcm
+     ngcm_unit      = 5,                                ! units of ngcm
                                                         !
      iter           = 100,                              ! number of subcycles between time levels                                                             ! stopped
 /
@@ -76,7 +76,7 @@
      starthour      = 0,
      startday       = 1,                                ! start date
      startmon       = 1,
-     startyear      = 2021,
+     startyear      = 2000,
      noleap         = .TRUE.,                           ! don't use leap years?
      mon30day       = .FALSE.
 /
@@ -92,7 +92,7 @@
      log_level    = 0
 
      ! Information of run time
-     intrun         = 225          ! number of time steps for run
+     intrun         = 120          ! number of time steps for run
 /
 
 &INIT_WRITE_TRAJ
@@ -103,8 +103,8 @@
                            ! 5 = write only start and end positions
 
 
-     outDataDir    = '/home/users/evanh/Tracmass_v7.1/tracmass_outputs_1/',
-     outDataFile   = 'ORCA12_NPD_SPNA_test',
+     outDataDir    = '/home/users/evanh/Tracmass_v7.1/personal_projects_outputs/project_3/',
+     outDataFile   = 'ORCA12_NPD_2000_1m_36N',
 
      timeformat    = 0     ! Format of the time array
                            ! 0 - tt / 1 - ts / 2 - YYYY, MM, DD, HH
@@ -121,7 +121,7 @@
      							      ! = 3 start on vertical wall
       idir           = 1, 				! = 1 start only when flux > 0
           		      				! = -1      only when flux < 0
-     	nqua           =  1,			      ! number of trajectories can be set by
+     	nqua           =  2,			      ! number of trajectories can be set by
      								! = 1 constant number of particles in all seeding cells
      								!     set by partQuant (particles / gridcell)
      								! = 2 Each particle reflects mass transport at seeding.
@@ -129,16 +129,16 @@
      								! = 3 Each particle reflects air/water mass/volume at seeding.
      								!     set by partQuant in m3 or kg per particle
 
-      nsdtraj        = 5,                       ! max number of trajectories expected to seed per seeding cell - used for array allocation
-      partquant      = 1,                       ! particles/gridcell or m3s-1/particle or m3/particle
+      nsdtraj        = 20,                       ! max number of trajectories expected to seed per seeding cell - used for array allocation
+      partquant      = 2500,                       ! particles/gridcell or m3s-1/particle or m3/particle
       seedtype       = 1,				! = 1 seed using ist,jst,kst (below)
           		      				! = 2 seed using file with start positions
 
      	! when seedtype = 1
-      ist1           = 2800, 				    ! seed in box in range i = [ist1,ist2]
-      ist2           = 3450, 				    ! j = [jst1,jst2]
-      jst1           = 2700, 				    ! k = [kst1,kst2]
-      jst2           = 2700,
+      ist1           = 2500, 				    ! seed in box in range i = [ist1,ist2]
+      ist2           = 3374, 				    ! j = [jst1,jst2]
+      jst1           = 2510, 				    ! k = [kst1,kst2]
+      jst2           = 2510,
       kst1           = 0,
       kst2           = 75,
       ! when seedtype = 2
@@ -155,7 +155,7 @@
       tst2           = 1,
 
       ! when seedtime = 2
-      timefile       = '',             ! name of seed file
+      timefile       = '/home/users/evanh/Tracmass_v7.1/personal_projects/project_2/seed_time.txt',             ! name of seed file
 /
 
 &INIT_TRACERS
@@ -192,7 +192,7 @@
 /
 
 &INIT_KILLZONES
-      timax = 1500 ! time limit for traj [days]
+      timax = 4000 ! time limit for traj [days]
       l_nosurface = .FALSE. ! prevent traj from reaching sea surface
 
       exitType = 1
@@ -206,10 +206,10 @@
       ! jenn = 300,  470,
       ! sets up two killzones, the first i = [0,100], j = [200,300]
       ! the other i = [500,1000], j = [450,470]
-      ienw = 2800,	   ! west indices of killzones
-      iene = 3450,   	   ! east indices of killzones
-      jens = 2700,         ! south indices of killzones
-      jenn = 2700,         ! north indices of killzones
+      ienw = 2500,	   ! west indices of killzones
+      iene = 3374,   	   ! east indices of killzones
+      jens = 2510,         ! south indices of killzones
+      jenn = 2510,         ! north indices of killzones
 
       ! If exitType = 2: killzone defined by tracer value
       ! Tracerchoice defines which tracer is used for the killing zone
