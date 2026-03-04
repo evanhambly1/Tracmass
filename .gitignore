@@ -6,3 +6,5 @@ data/*
 
 # Data files
 *.nc
+*.nc
+*.parquet
