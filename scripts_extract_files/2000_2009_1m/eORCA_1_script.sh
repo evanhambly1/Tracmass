@@ -21,11 +21,11 @@ do
     do
         # Get date-string {YYYYMMDD-YYYYMMDD} from filename:
         datestr_list=''
-        for fpath in `ls ${SRC_NAME}/${yr}/${CONFIG}_grid_T_${yr}${mt}-${yr}${mt}.nc`
+        for fpath in `ls ${SRC_NAME}/${CONFIG}_grid_T_${yr}${mt}-${yr}${mt}.nc`
         do
             # Get filename from path:
             fname=$(echo ${fpath##*/})
-            dtstr=$(echo ${fname:18:19})
+            dtstr=$(echo ${fname:22:13})
             # Remove .n from date-string:
             dtstr=${dtstr%.*}
             datestr_list="$datestr_list $dtstr"
@@ -39,7 +39,7 @@ do
             for grid in grid_T grid_U grid_V grid_W
             do
                 # Iterate over all output .nc files:
-                for filename in `ls ${SRC_NAME}/${yr}/${CONFIG}_${grid}_${datestr}.nc`
+                for filename in `ls ${SRC_NAME}/${CONFIG}_${grid}_${datestr}.nc`
                 do
                 # Create symbolic link to output file using starting date of date-string:
                 ln -s ${filename} ${CONFIG}_${datestr:0:8}_${grid}.nc
