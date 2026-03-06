@@ -3,8 +3,8 @@
 #================================================================
 
 # Project and case definition
-PROJECT	          = project_2
-CASE              = eORCA12_SPNA_test
+PROJECT	          = project_1m/eORCA1/eORCA1_files
+CASE              = eORCA1_2000_2009_1m
 RUNFILE	          = runtracmass
 ARCH              = jasmin-gnu
 NETCDFLIBS        = jasmin-gnu
@@ -23,14 +23,14 @@ NETCDFLIBS        = jasmin-gnu
 #================================================================
 
 # Read the project Makefile
-PROJMAKE           := $(wildcard personal_projects/$(PROJECT)/Makefile.prj)
-CASEMAKE           := $(wildcard personal_projects/$(PROJECT)/Makefile.prj)
+PROJMAKE           := $(wildcard $(PROJECT)/Makefile.prj)
+CASEMAKE           := $(wildcard $(PROJECT)/Makefile.prj)
 
 ifneq ($(strip $(CASEMAKE)),)
-include personal_projects/$(PROJECT)/Makefile.prj
+include $(PROJECT)/Makefile.prj
 else
 ifneq ($(strip $(PROJMAKE)),)
-include personal_projects/$(PROJECT)/Makefile.prj
+include $(PROJECT)/Makefile.prj
 endif
 endif
 
@@ -81,15 +81,15 @@ FF = -g -O3 -fbacktrace -fbounds-check -Wall -Wno-maybe-uninitialized -Wno-unuse
 endif
 
 # Path to sources
-VPATH = src:personal_projects/$(PROJECT)
+VPATH = src:$(PROJECT)
 
 all: runfile
 
 ifneq ($(strip $(CASE)),)
-	cp personal_projects/$(PROJECT)/namelist_$(CASE).in namelist.in
+	cp $(PROJECT)/namelist_$(CASE).in namelist.in
 else
 ifneq ($(strip $(PROJECT)),)
-	cp personal_projects/$(PROJECT)/namelist_$(PROJECT).in namelist.in
+	cp $(PROJECT)/namelist_$(PROJECT).in namelist.in
 endif
 endif
 
