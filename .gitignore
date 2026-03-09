@@ -12,3 +12,4 @@ data/*
 *.parquet
 tracmass_outputs_1/
 personal_projects_outputs/
+project_1m/eORCA1/eORCA1_output/

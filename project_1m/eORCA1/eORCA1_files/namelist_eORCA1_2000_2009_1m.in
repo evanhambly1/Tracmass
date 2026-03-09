@@ -9,12 +9,12 @@
         l_onestep = .TRUE.
 
         ! Describe filenames
-        physDataDir    = '/home/emdh1n25/Tracmass/eORCA_1_data/Data_1m/',  ! directory of physical data (u,v,T,S,MLD,etc)
+        physDataDir    = '/home/emdh1n25/Tracmass/eORCA_1_data/Data_1m_2000_2009/',  ! directory of physical data (u,v,T,S,MLD,etc)
         physPrefixForm = 'eORCA1_ERA5_1m_',
         dateformat     = 'YYYYMM'
-        tGridName      = '-2_grid_T',                           ! name of Tgrid, e.g. grid_T
-        uGridName      = '-2_grid_U',                           ! name of Ugrid
-        vGridName      = '-2_grid_V',                           ! name of Vgrid                                                ! suffix of files, e.g. ".nc"
+        tGridName      = '_grid_T',                           ! name of Tgrid, e.g. grid_T
+        uGridName      = '_grid_U',                           ! name of Ugrid
+        vGridName      = '_grid_V',                           ! name of Vgrid                                                ! suffix of files, e.g. ".nc"
 
         fileSuffix     = '.nc',
 
@@ -22,8 +22,8 @@
         hs_name        = 'zos'             ! Sea surface height
         ueul_name      = 'uo',             ! name of resolved zonal velocity
         veul_name      = 'vo',             ! ---- " -------   meridional
-        usgs_name      = '',               ! name of eddy induced zonal velocity
-        vsgs_name      = '',               ! ---- " -------   meridional
+        usgs_name      = 'uo_eiv',               ! name of eddy induced zonal velocity
+        vsgs_name      = 'vo_eiv',               ! ---- " -------   meridional
 /
 
 &INIT_GRID_SIZE
@@ -59,7 +59,7 @@
      imindom     = 200,                                  ! Eastern and western wall for subdomain
      imaxdom     = 300,
      jmindom     = 200,                                  ! Southern and northern wall for subdomain
-     jmaxdom     = 282,
+     jmaxdom     = 287,
 /
 
 &INIT_GRID_TIME
