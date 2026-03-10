@@ -56,9 +56,9 @@
 
 &INIT_GRID_SUBDOMAIN
      l_subdom    = .TRUE.,                               ! Initialise subdomain
-     imindom     = 200,                                  ! Eastern and western wall for subdomain
-     imaxdom     = 300,
-     jmindom     = 200,                                  ! Southern and northern wall for subdomain
+     imindom     = 185,                                  ! Eastern and western wall for subdomain
+     imaxdom     = 296,
+     jmindom     = 198,                                  ! Southern and northern wall for subdomain
      jmaxdom     = 287,
 /
 
@@ -104,7 +104,7 @@
 
 
      outDataDir    = '/home/emdh1n25/Tracmass/project_1m/eORCA1/eORCA1_output/',
-     outDataFile   = 'ORCA1_NPD_2000_1m_36N',
+     outDataFile   = 'ORCA1_NPD_2000_2009_1m',
 
      timeformat    = 0     ! Format of the time array
                            ! 0 - tt / 1 - ts / 2 - YYYY, MM, DD, HH
@@ -136,7 +136,7 @@
 
      	! when seedtype = 1
       ist1           = 208, 				    ! seed in box in range i = [ist1,ist2]
-      ist2           = 282, 				    ! j = [jst1,jst2]
+      ist2           = 281, 				    ! j = [jst1,jst2]
       jst1           = 241, 				    ! k = [kst1,kst2]
       jst2           = 241,
       kst1           = 0,
@@ -192,7 +192,7 @@
 /
 
 &INIT_KILLZONES
-      timax = 4000 ! time limit for traj [days]
+      timax = 10000 ! time limit for traj [days]
       l_nosurface = .FALSE. ! prevent traj from reaching sea surface
 
       exitType = 1
@@ -207,7 +207,7 @@
       ! sets up two killzones, the first i = [0,100], j = [200,300]
       ! the other i = [500,1000], j = [450,470]
       ienw = 208,	   ! west indices of killzones
-      iene = 282,   	   ! east indices of killzones
+      iene = 281,	   ! east indices of killzones
       jens = 241,         ! south indices of killzones
       jenn = 241,         ! north indices of killzones
 

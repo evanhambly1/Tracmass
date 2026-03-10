@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name="eORCA1_1m_36N"
+#SBATCH --job-name="eORCA1_1m"
 #SBATCH --time=05:00:00
 #SBATCH --mem=24G
 #SBATCH --account=hpcuser
@@ -33,4 +33,4 @@ make
 
 # Run TRACMASS:
 #srun --unbuffered ./runtracmass
-srun --unbuffered ./runtracmass &> ./logs/runtracmass_log.out
+srun --unbuffered ./runtracmass &> ./logs/eORCA_1/2000_2024_NS/runtracmass_log.out
