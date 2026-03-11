@@ -10,11 +10,11 @@
 # Created By: Ollie Tooth (oliver.tooth@noc.ac.uk)
 # -------------------------------------------------
 # Definitions:
-SRC_NAME=/dssgfs01/scratch/npd/simulations/eORCA025_ERA5_v1
-CONFIG=eORCA025_ERA5_1m
+SRC_NAME=/dssgfs01/scratch/npd/simulations/eORCA1_ERA5_v1
+CONFIG=eORCA1_ERA5_1m
 
 # Iterate over years:
-for yr in {2000..2009}
+for yr in {2000..2024}
 do
     # Iterate over months each year:
     for mt in {01..12}
@@ -25,7 +25,7 @@ do
         do
             # Get filename from path:
             fname=$(echo ${fpath##*/})
-            dtstr=$(echo ${fname:24:13})
+            dtstr=$(echo ${fname:22:13})
             # Remove .n from date-string:
             dtstr=${dtstr%.*}
             datestr_list="$datestr_list $dtstr"

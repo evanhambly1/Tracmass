@@ -59,7 +59,7 @@
      imindom     = 737,                                  ! Eastern and western wall for subdomain
      imaxdom     = 1185,
      jmindom     = 695,                                  ! Southern and northern wall for subdomain
-     jmaxdom     = 1128,
+     jmaxdom     = 1030,
 /
 
 &INIT_GRID_TIME
@@ -104,7 +104,7 @@
 
 
      outDataDir    = '/home/emdh1n25/Tracmass/project_1m/eORCA025/eORCA025_output/',
-     outDataFile   = 'ORCA025_NPD_2000_2024_NS_1m',
+     outDataFile   = 'ORCA025_NPD_2000_2024_1m',
 
      timeformat    = 0     ! Format of the time array
                            ! 0 - tt / 1 - ts / 2 - YYYY, MM, DD, HH
@@ -206,10 +206,10 @@
       ! jenn = 300,  470,
       ! sets up two killzones, the first i = [0,100], j = [200,300]
       ! the other i = [500,1000], j = [450,470]
-      ienw = 832, 737	     ! west indices of killzones
-      iene = 1125, 980        ! east indices of killzones
-      jens = 844, 1030        ! south indices of killzones
-      jenn = 844, 1030        ! north indices of killzones
+      ienw = 832,        ! west indices of killzones
+      iene = 1125,        ! east indices of killzones
+      jens = 844,        ! south indices of killzones
+      jenn = 844,        ! north indices of killzones
 
       ! If exitType = 2: killzone defined by tracer value
       ! Tracerchoice defines which tracer is used for the killing zone
