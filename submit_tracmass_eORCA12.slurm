@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name="eORCA12_1m"
+#SBATCH --job-name="eORCA12_1990_2000_1m"
 #SBATCH --time=05:00:00
 #SBATCH --mem=24G
 #SBATCH --account=atlantis
@@ -33,4 +33,4 @@ make
 
 # Run TRACMASS:
 #srun --unbuffered ./runtracmass
-srun --unbuffered ./runtracmass &> ./logs/eORCA_12/2000_2024_NS/runtracmass_log.out
+srun --unbuffered ./runtracmass &> ./logs/eORCA_12/1990_2000/runtracmass_log.out

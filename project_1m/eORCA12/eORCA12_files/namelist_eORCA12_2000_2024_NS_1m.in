@@ -103,7 +103,7 @@
                            ! 5 = write only start and end positions
 
 
-     outDataDir    = '/home/users/evanh/Tracmass/project_1m/eORCA12/eORCA12_output/',
+     outDataDir    = '/work/scratch-pw5/evanh/project_1m/eORCA12/eORCA12_output/',
      outDataFile   = 'ORCA12_NPD_2000_2024_NS_1m',
 
      timeformat    = 0     ! Format of the time array

@@ -3,7 +3,7 @@
  ===============================================================================
  
  Start date  : 2026-03-11
- Start time  : 15:44:05
+ Start time  : 18:58:50
  
  -------------------------------------------------------------------------------
  
@@ -28,22 +28,4 @@
  
  -------------------------------------------------------------------------------
  
- imindom:        2221 jmindom:        2075 imt:        1339 jmt:        1301
- Output information:
- Directory for output files : /home/users/evanh/Tracmass/project_1m/eORCA12/eORCA12_output/
- Prefix for output files    : ORCA12_NPD_2000_2024_NS_1m
- 
- -------------------------------------------------------------------------------
- 
- Start date in model-time     : 2000-01-01 00:00
- End date in model-time       : 2024-12-01 00:00
- Length of run in timesteps   :    300
- Number of seeding timesteps  :      1
- Time integration scheme      : regular time step scheme
- Steps between two GCM fields :    100
- 
- -------------------------------------------------------------------------------
- t-step        run        out        err        tot                 model date
- -------------------------------------------------------------------------------
-      1 |   279397 |        0 |        0 |   279397 |   2000-01-01    00:00:00
-      2 |   167352 |   112045 |        0 |   279397 |   2000-02-01    00:00:00
+srun: error: host1018: task 0: Bus error (core dumped)
