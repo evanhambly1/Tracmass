@@ -1,0 +1,46 @@
+ ===============================================================================
+              TRACMASS Lagrangian off-line particle tracking 
+ ===============================================================================
+ 
+ Start date  : 2026-03-11
+ Start time  : 18:59:21
+ 
+ -------------------------------------------------------------------------------
+ 
+ Model information:
+ Project code  : project_1m/eORCA12/eORC
+ Case name     : eORCA12_2000_2009_1m
+ Namelist file : projects/project_1m/eORCA12/eORC/namelist_eORCA12_2000_2009_1m.in
+ 
+ -------------------------------------------------------------------------------
+ 
+ Configuration options:
+  - Forward in time (nff = 1)
+  - A subdomain has been choosen
+      i index:  2220 - 3558 
+      j index:  2074 - 3079 
+  - Three-dimensional trajectories (vertical fluxes computed)
+  - Evaluate the value of these tracers along the trajectories:
+     1- mld (m) 
+     2- q (wm-2) 
+     3- temp (degC) 
+     4- sal (gkg-1) 
+ 
+ -------------------------------------------------------------------------------
+ 
+
+Program received signal SIGBUS: Access to an undefined portion of a memory object.
+
+Backtrace for this error:
+
+Could not print backtrace: /proc/self/exe, errno: 116
+#0  0x7fc95b5eb4ba
+#1  0x7fc95b5eaa41
+#2  0x7fc95b23fc2f
+#3  0x55e8cb89d200
+#4  0x55e8cb85537c
+#5  0x7fc95b22a60f
+#6  0x7fc95b22a6bf
+#7  0x55e8cb855469
+#8  0xffffffffffffffff
+srun: error: host1015: task 0: Bus error (core dumped)
