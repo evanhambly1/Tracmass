@@ -1,0 +1,50 @@
+ ===============================================================================
+              TRACMASS Lagrangian off-line particle tracking 
+ ===============================================================================
+ 
+ Start date  : 2026-03-11
+ Start time  : 15:42:58
+ 
+ -------------------------------------------------------------------------------
+ 
+ Model information:
+ Project code  : project_1m/eORCA12/eORC
+ Case name     : eORCA12_2000_2009_1m
+ Namelist file : projects/project_1m/eORCA12/eORC/namelist_eORCA12_2000_2009_1m.in
+ 
+ -------------------------------------------------------------------------------
+ 
+ Configuration options:
+  - Forward in time (nff = 1)
+  - A subdomain has been choosen
+      i index:  2220 - 3558 
+      j index:  2074 - 3079 
+  - Three-dimensional trajectories (vertical fluxes computed)
+  - Evaluate the value of these tracers along the trajectories:
+     1- mld (m) 
+     2- q (wm-2) 
+     3- temp (degC) 
+     4- sal (gkg-1) 
+ 
+ -------------------------------------------------------------------------------
+ 
+ imindom:        2221 jmindom:        2075 imt:        1339 jmt:        1006
+ Output information:
+ Directory for output files : /home/users/evanh/Tracmass/project_1m/eORCA12/eORCA12_output/
+ Prefix for output files    : ORCA12_NPD_2000_2009_1m
+ 
+ -------------------------------------------------------------------------------
+ 
+ Start date in model-time     : 2000-01-01 00:00
+ End date in model-time       : 2009-12-01 00:00
+ Length of run in timesteps   :    120
+ Number of seeding timesteps  :      1
+ Time integration scheme      : regular time step scheme
+ Steps between two GCM fields :    100
+ 
+ -------------------------------------------------------------------------------
+ t-step        run        out        err        tot                 model date
+ -------------------------------------------------------------------------------
+      1 |   279397 |        0 |        0 |   279397 |   2000-01-01    00:00:00
+      2 |   167352 |   112045 |        0 |   279397 |   2000-02-01    00:00:00
+      3 |   127574 |   151823 |        0 |   279397 |   2000-03-01    00:00:00

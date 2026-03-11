@@ -33,4 +33,4 @@ make
 
 # Run TRACMASS:
 #srun --unbuffered ./runtracmass
-srun --unbuffered ./runtracmass &> ./logs/eORCA_12/2000_2009/runtracmass_log.out
+srun --unbuffered ./runtracmass &> ./logs/eORCA_12/2000_2024_NS/runtracmass_log.out
