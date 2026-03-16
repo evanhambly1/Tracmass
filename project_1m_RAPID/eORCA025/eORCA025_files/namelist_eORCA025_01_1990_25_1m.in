@@ -9,7 +9,7 @@
         l_onestep = .TRUE.
 
         ! Describe filenames
-        physDataDir    = '/home/emdh1n25/Tracmass/eORCA_025_data/Data_1m_2000_2009/',  ! directory of physical data (u,v,T,S,MLD,etc)
+        physDataDir    = '/home/emdh1n25/Tracmass/eORCA_025_data/Data_1m_1990_2024/',  ! directory of physical data (u,v,T,S,MLD,etc)
         physPrefixForm = 'eORCA025_ERA5_1m_',
         dateformat     = 'YYYYMM'
         tGridName      = '_grid_T',                           ! name of Tgrid, e.g. grid_T
@@ -59,7 +59,7 @@
      imindom     = 737,                                  ! Eastern and western wall for subdomain
      imaxdom     = 1185,
      jmindom     = 695,                                  ! Southern and northern wall for subdomain
-     jmaxdom     = 1030,
+     jmaxdom     = 1128,
 /
 
 &INIT_GRID_TIME
@@ -76,7 +76,7 @@
      starthour      = 0,
      startday       = 1,                                ! start date
      startmon       = 1,
-     startyear      = 2000,
+     startyear      = 1990,
      noleap         = .TRUE.,                           ! don't use leap years?
      mon30day       = .FALSE.
 /
@@ -92,7 +92,7 @@
      log_level    = 0
 
      ! Information of run time
-     intrun         = 120          ! number of time steps for run
+     intrun         = 300          ! number of time steps for run
 /
 
 &INIT_WRITE_TRAJ
@@ -103,8 +103,8 @@
                            ! 5 = write only start and end positions
 
 
-     outDataDir    = '/dssgfs01/scratch/emdh1n25/project_1m/eORCA025/eORCA025_output/',
-     outDataFile   = 'ORCA025_NPD_2000_2009_1m',
+     outDataDir    = '/dssgfs01/scratch/emdh1n25/project_1m_RAPID/eORCA025/eORCA025_output/',
+     outDataFile   = 'ORCA025_NPD_01_1990_25_1m',
 
      timeformat    = 0     ! Format of the time array
                            ! 0 - tt / 1 - ts / 2 - YYYY, MM, DD, HH
@@ -135,10 +135,10 @@
           		      				! = 2 seed using file with start positions
 
      	! when seedtype = 1
-      ist1           = 832, 				    ! seed in box in range i = [ist1,ist2]
+      ist1           = 820, 				    ! seed in box in range i = [ist1,ist2]
       ist2           = 1125, 				    ! j = [jst1,jst2]
-      jst1           = 844, 				    ! k = [kst1,kst2]
-      jst2           = 844,
+      jst1           = 796, 				    ! k = [kst1,kst2]
+      jst2           = 796,
       kst1           = 0,
       kst2           = 75,
       ! when seedtype = 2
@@ -206,10 +206,10 @@
       ! jenn = 300,  470,
       ! sets up two killzones, the first i = [0,100], j = [200,300]
       ! the other i = [500,1000], j = [450,470]
-      ienw = 832,	   ! west indices of killzones
-      iene = 1125,	   ! east indices of killzones
-      jens = 844,         ! south indices of killzones
-      jenn = 844,         ! north indices of killzones
+      ienw = 820,   737, 882        ! west indices of killzones
+      iene = 1125, 1000, 882        ! east indices of killzones
+      jens = 796,  1041, 950        ! south indices of killzones
+      jenn = 796,  1041, 1128       ! north indices of killzones
 
       ! If exitType = 2: killzone defined by tracer value
       ! Tracerchoice defines which tracer is used for the killing zone

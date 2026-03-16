@@ -3,15 +3,9 @@
 #================================================================
 
 # Project and case definition
-<<<<<<< HEAD
-PROJECT	          = project_1m_RAPID/eORCA1/eORCA1_files
-CASE              = eORCA1_01_1990_25_1m
+PROJECT	          = project_1m_RAPID/eORCA025/eORCA025_files
+CASE              = eORCA025_01_1990_25_1m
 RUNFILE	          = runtracmass
-=======
-PROJECT           = project_1m/eORCA12/eORCA12_files
-CASE              = eORCA12_2000_2024_NS_1m
-RUNFILE           = runtracmass
->>>>>>> 2719573ae1ba65b160b0e810e1cc6c8743dcd2f4
 ARCH              = jasmin-gnu
 NETCDFLIBS        = jasmin-gnu
 #================================================================

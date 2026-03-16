@@ -206,10 +206,10 @@
       ! jenn = 300,  470,
       ! sets up two killzones, the first i = [0,100], j = [200,300]
       ! the other i = [500,1000], j = [450,470]
-      ienw = 205, 185	     ! west indices of killzones
-      iene = 281, 250        ! east indices of killzones
-      jens = 229, 287        ! south indices of killzones
-      jenn = 229, 287        ! north indices of killzones
+      ienw = 205, 185, 220       ! west indices of killzones
+      iene = 281, 250, 220       ! east indices of killzones
+      jens = 229, 290, 270       ! south indices of killzones
+      jenn = 229, 290, 312       ! north indices of killzones
 
       ! If exitType = 2: killzone defined by tracer value
       ! Tracerchoice defines which tracer is used for the killing zone

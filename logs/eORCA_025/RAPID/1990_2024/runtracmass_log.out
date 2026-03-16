@@ -1,0 +1,62 @@
+ ===============================================================================
+              TRACMASS Lagrangian off-line particle tracking 
+ ===============================================================================
+ 
+ Start date  : 2026-03-16
+ Start time  : 18:11:53
+ 
+ -------------------------------------------------------------------------------
+ 
+ Model information:
+ Project code  : project_1m_RAPID/eORCA0
+ Case name     : eORCA025_01_1990_25_1m
+ Namelist file : projects/project_1m_RAPID/eORCA0/namelist_eORCA025_01_1990_25_1m.in
+ 
+ -------------------------------------------------------------------------------
+ 
+ Configuration options:
+  - Forward in time (nff = 1)
+  - A subdomain has been choosen
+      i index:   737 - 1185 
+      j index:   694 - 1127 
+  - Three-dimensional trajectories (vertical fluxes computed)
+  - Evaluate the value of these tracers along the trajectories:
+     1- mld (m) 
+     2- q (wm-2) 
+     3- temp (degC) 
+     4- sal (gkg-1) 
+ 
+ -------------------------------------------------------------------------------
+ 
+ imindom:         738 jmindom:         695 imt:         449 jmt:         434
+ Output information:
+ Directory for output files : /dssgfs01/scratch/emdh1n25/project_1m_RAPID/eORCA025/eORCA025_output/
+ Prefix for output files    : ORCA025_NPD_01_1990_25_1m
+ 
+ -------------------------------------------------------------------------------
+ 
+ Start date in model-time     : 1990-01-01 00:00
+ End date in model-time       : 2014-12-01 00:00
+ Length of run in timesteps   :    300
+ Number of seeding timesteps  :      1
+ Time integration scheme      : regular time step scheme
+ Steps between two GCM fields :    100
+ 
+ -------------------------------------------------------------------------------
+ t-step        run        out        err        tot                 model date
+ -------------------------------------------------------------------------------
+      1 |    89476 |        0 |        0 |    89476 |   1990-01-01    00:00:00
+      2 |    76705 |    12771 |        0 |    89476 |   1990-02-01    00:00:00
+      3 |    65333 |    24143 |        0 |    89476 |   1990-03-01    00:00:00
+      4 |    58538 |    30938 |        0 |    89476 |   1990-04-01    00:00:00
+      5 |    53538 |    35938 |        0 |    89476 |   1990-05-01    00:00:00
+      6 |    49158 |    40318 |        0 |    89476 |   1990-06-01    00:00:00
+      7 |    46658 |    42818 |        0 |    89476 |   1990-07-01    00:00:00
+      8 |    44653 |    44823 |        0 |    89476 |   1990-08-01    00:00:00
+      9 |    43481 |    45995 |        0 |    89476 |   1990-09-01    00:00:00
+     10 |    41651 |    47825 |        0 |    89476 |   1990-10-01    00:00:00
+     11 |    39549 |    49927 |        0 |    89476 |   1990-11-01    00:00:00
+     12 |    37999 |    51477 |        0 |    89476 |   1990-12-01    00:00:00
+     13 |    36806 |    52670 |        0 |    89476 |   1991-01-01    00:00:00
+     14 |    35503 |    53973 |        0 |    89476 |   1991-02-01    00:00:00
+     15 |    34398 |    55078 |        0 |    89476 |   1991-03-01    00:00:00
