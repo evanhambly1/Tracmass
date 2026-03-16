@@ -9,7 +9,7 @@
         l_onestep = .TRUE.
 
         ! Describe filenames
-        physDataDir    = '/home/users/evanh/Tracmass/eORCA_12_data/Data_1m_2000_2009/',  ! directory of physical data (u,v,T,S,MLD,etc)
+        physDataDir    = '/home/users/evanh/Tracmass/eORCA_12_data/Data_1m_1990_2024/',  ! directory of physical data (u,v,T,S,MLD,etc)
         physPrefixForm = 'eORCA12_1m_',
         dateformat     = 'YYYYMM'
         tGridName      = '_grid_T',                           ! name of Tgrid, e.g. grid_T
@@ -59,7 +59,7 @@
      imindom     = 2220,                                  ! Eastern and western wall for subdomain
      imaxdom     = 3558,
      jmindom     = 2075,                                  ! Southern and northern wall for subdomain
-     jmaxdom     = 3080,
+     jmaxdom     = 3375,
 /
 
 &INIT_GRID_TIME
@@ -76,7 +76,7 @@
      starthour      = 0,
      startday       = 1,                                ! start date
      startmon       = 1,
-     startyear      = 2000,
+     startyear      = 1990,
      noleap         = .TRUE.,                           ! don't use leap years?
      mon30day       = .FALSE.
 /
@@ -92,7 +92,7 @@
      log_level    = 0
 
      ! Information of run time
-     intrun         = 120          ! number of time steps for run
+     intrun         = 300          ! number of time steps for run
 /
 
 &INIT_WRITE_TRAJ
@@ -103,8 +103,8 @@
                            ! 5 = write only start and end positions
 
 
-     outDataDir    = '/work/scratch-pw5/evanh/project_1m/eORCA12/eORCA12_output/',
-     outDataFile   = 'ORCA12_NPD_2000_2009_1m',
+     outDataDir    = '/work/scratch-pw5/evanh/project_1m_RAPID/eORCA12/eORCA12_output/',
+     outDataFile   = 'ORCA12_NPD_01_1990_25_1m',
 
      timeformat    = 0     ! Format of the time array
                            ! 0 - tt / 1 - ts / 2 - YYYY, MM, DD, HH
@@ -135,10 +135,10 @@
           		      				! = 2 seed using file with start positions
 
      	! when seedtype = 1
-      ist1           = 2500, 				    ! seed in box in range i = [ist1,ist2]
+      ist1           = 2462, 				    ! seed in box in range i = [ist1,ist2]
       ist2           = 3376, 				    ! j = [jst1,jst2]
-      jst1           = 2521, 				    ! k = [kst1,kst2]
-      jst2           = 2521,
+      jst1           = 2377, 				    ! k = [kst1,kst2]
+      jst2           = 2377,
       kst1           = 0,
       kst2           = 75,
       ! when seedtype = 2
@@ -206,10 +206,10 @@
       ! jenn = 300,  470,
       ! sets up two killzones, the first i = [0,100], j = [200,300]
       ! the other i = [500,1000], j = [450,470]
-      ienw = 2500,	   ! west indices of killzones
-      iene = 3376,	   ! east indices of killzones
-      jens = 2521,         ! south indices of killzones
-      jenn = 2521,         ! north indices of killzones
+      ienw = 2462, 2220, 2646	     ! west indices of killzones
+      iene = 3376, 2960, 2646       ! east indices of killzones
+      jens = 2377, 3112, 2850       ! south indices of killzones
+      jenn = 2377, 3112, 3375       ! north indices of killzones
 
       ! If exitType = 2: killzone defined by tracer value
       ! Tracerchoice defines which tracer is used for the killing zone
