@@ -9,8 +9,13 @@
         l_onestep = .TRUE.
 
         ! Describe filenames
+<<<<<<< HEAD
         physDataDir    = '/home/emdh1n25/Tracmass/eORCA_1_data/Data_1m_1990_2024/',  ! directory of physical data (u,v,T,S,MLD,etc)
         physPrefixForm = 'eORCA1_ERA5_1m_',
+=======
+        physDataDir    = '/home/users/evanh/Tracmass/eORCA_12_data/Data_1m_2000_2024/',  ! directory of physical data (u,v,T,S,MLD,etc)
+        physPrefixForm = 'eORCA12_1m_',
+>>>>>>> 2719573ae1ba65b160b0e810e1cc6c8743dcd2f4
         dateformat     = 'YYYYMM'
         tGridName      = '_grid_T',                           ! name of Tgrid, e.g. grid_T
         uGridName      = '_grid_U',                           ! name of Ugrid
@@ -56,10 +61,17 @@
 
 &INIT_GRID_SUBDOMAIN
      l_subdom    = .TRUE.,                               ! Initialise subdomain
+<<<<<<< HEAD
      imindom     = 185,                                  ! Eastern and western wall for subdomain
      imaxdom     = 296,
      jmindom     = 198,                                  ! Southern and northern wall for subdomain
      jmaxdom     = 312,
+=======
+     imindom     = 2220,                                  ! Eastern and western wall for subdomain
+     imaxdom     = 3558,
+     jmindom     = 2075,                                  ! Southern and northern wall for subdomain
+     jmaxdom     = 3375,
+>>>>>>> 2719573ae1ba65b160b0e810e1cc6c8743dcd2f4
 /
 
 &INIT_GRID_TIME
@@ -103,8 +115,13 @@
                            ! 5 = write only start and end positions
 
 
+<<<<<<< HEAD
      outDataDir    = '/dssgfs01/scratch/emdh1n25/project_1m_RAPID/eORCA1/eORCA1_output/',
      outDataFile   = 'ORCA1_NPD_01_1990_25_1m',
+=======
+     outDataDir    = '/work/scratch-pw5/evanh/project_1m/eORCA12/eORCA12_output/',
+     outDataFile   = 'ORCA12_NPD_2000_2024_NS_1m',
+>>>>>>> 2719573ae1ba65b160b0e810e1cc6c8743dcd2f4
 
      timeformat    = 0     ! Format of the time array
                            ! 0 - tt / 1 - ts / 2 - YYYY, MM, DD, HH
@@ -206,10 +223,17 @@
       ! jenn = 300,  470,
       ! sets up two killzones, the first i = [0,100], j = [200,300]
       ! the other i = [500,1000], j = [450,470]
+<<<<<<< HEAD
       ienw = 205, 185	     ! west indices of killzones
       iene = 281, 250        ! east indices of killzones
       jens = 229, 287        ! south indices of killzones
       jenn = 229, 287        ! north indices of killzones
+=======
+      ienw = 2500, 2220	     ! west indices of killzones
+      iene = 3376, 2960        ! east indices of killzones
+      jens = 2521, 3080        ! south indices of killzones
+      jenn = 2521, 3080        ! north indices of killzones
+>>>>>>> 2719573ae1ba65b160b0e810e1cc6c8743dcd2f4
 
       ! If exitType = 2: killzone defined by tracer value
       ! Tracerchoice defines which tracer is used for the killing zone
