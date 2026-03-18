@@ -1,0 +1,4 @@
+f951: Fatal Error: Cannot delete temporary module file 'mod_precdef.mod0': No such file or directory
+compilation terminated.
+make: *** [Makefile:110: _build/mod_vars.o] Error 1
+/tmp/slurmd/job307167/slurm_script: line 32: ./logs/1992/07/runtracmass_log.out: No such file or directory

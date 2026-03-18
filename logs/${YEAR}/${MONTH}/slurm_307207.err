@@ -1,0 +1,7 @@
+rm: cannot remove 'Makefile': No such file or directory
+ln: failed to create symbolic link 'Makefile': File exists
+make: *** No rule to make target 'Makefile'.  Stop.
+f951: Fatal Error: Reading module 'mod_precdef.mod' at line 1 column 1: Unexpected EOF
+compilation terminated.
+make: *** [Makefile:110: _build/mod_vars.o] Error 1
+/tmp/slurmd/job307207/slurm_script: line 32: ./logs/1995/11/runtracmass_log.out: No such file or directory

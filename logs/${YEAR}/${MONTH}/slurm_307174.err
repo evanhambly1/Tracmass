@@ -1,0 +1,6 @@
+rm: cannot remove 'Makefile': No such file or directory
+make: Makefile: No such file or directory
+make: *** No rule to make target 'Makefile'.  Stop.
+make: Makefile: No such file or directory
+make: *** No rule to make target 'Makefile'.  Stop.
+/tmp/slurmd/job307174/slurm_script: line 32: ./logs/1993/02/runtracmass_log.out: No such file or directory

@@ -1,10 +1,11 @@
 #================================================================
 #                     TRACMASS MAKEFILE
 #================================================================
-
+YEAR    ?= 1990
+MONTH   ?= 01
 # Project and case definition
-PROJECT	          = project_1m_RAPID/eORCA12/eORCA12_files
-CASE              = eORCA12_01_1990_25_1m
+PROJECT	          = project_1m_RAPID/eORCA1/eORCA1_files/$(YEAR)
+CASE              = eORCA1_$(MONTH)_$(YEAR)_25_1m
 RUNFILE	          = runtracmass
 ARCH              = jasmin-gnu
 NETCDFLIBS        = jasmin-gnu

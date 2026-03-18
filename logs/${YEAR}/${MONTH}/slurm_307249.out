@@ -1,0 +1,8 @@
+rm -rf *.o *.mod *.out *.dSYM *.csv fort.* *.x *.in
+rm -rf _build
+test -s runtest.sh && rm runtest.sh || true
+test -s runtracmass && rm runtracmass || true
+mkdir -p _build
+gfortran -g -O3 -fbacktrace -fbounds-check -Wall -Wno-maybe-uninitialized -Wno-unused-dummy-argument -ftree-vectorize -funroll-loops -ffast-math -c -Dproject_1m_RAPID/eORCA025/eORCA025_files/1999 -Dw_3dim        -DPROJECT_NAME=\'project_1m_RAPID/eORCA025/eORCA025_files/1999\' -DCASE_NAME=\'eORCA025_05_1999_25_1m\'   src/mod_vars.F90 -o _build/mod_vars.o
+gfortran -g -O3 -fbacktrace -fbounds-check -Wall -Wno-maybe-uninitialized -Wno-unused-dummy-argument -ftree-vectorize -funroll-loops -ffast-math -c -Dproject_1m_RAPID/eORCA025/eORCA025_files/1999 -Dw_3dim        -DPROJECT_NAME=\'project_1m_RAPID/eORCA025/eORCA025_files/1999\' -DCASE_NAME=\'eORCA025_05_1999_25_1m\'   src/mod_subdomain.F90 -o _build/mod_subdomain.o
+gfortran -g -O3 -fbacktrace -fbounds-check -Wall -Wno-maybe-uninitialized -Wno-unused-dummy-argument -ftree-vectorize -funroll-loops -ffast-math -c -Dproject_1m_RAPID/eORCA025/eORCA025_files/1999 -Dw_3dim        -DPROJECT_NAME=\'project_1m_RAPID/eORCA025/eORCA025_files/1999\' -DCASE_NAME=\'eORCA025_05_1999_25_1m\'   src/mod_getfile.F90 -o _build/mod_getfile.o

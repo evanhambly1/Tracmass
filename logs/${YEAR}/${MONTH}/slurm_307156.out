@@ -1,0 +1,6 @@
+rm -rf *.o *.mod *.out *.dSYM *.csv fort.* *.x *.in
+rm -rf _build
+test -s runtest.sh && rm runtest.sh || true
+test -s runtracmass && rm runtracmass || true
+mkdir -p _build
+gfortran -g -O3 -fbacktrace -fbounds-check -Wall -Wno-maybe-uninitialized -Wno-unused-dummy-argument -ftree-vectorize -funroll-loops -ffast-math -c -Dproject_1m_RAPID/eORCA025/eORCA025_files/1991 -Dw_3dim        -DPROJECT_NAME=\'project_1m_RAPID/eORCA025/eORCA025_files/1991\' -DCASE_NAME=\'eORCA025_08_1991_25_1m\' -I/opt/software/rocky9/eb/software/netCDF-Fortran/4.6.1-gompi-2023a/include -I/opt/software/rocky9/eb/software/bzip2/1.0.8-GCCcore-12.3.0/include -I/opt/software/rocky9/eb/software/netCDF/4.9.2-gompi-2023a/include -DgFortran -L/opt/software/rocky9/eb/software/netCDF-Fortran/4.6.1-gompi-2023a/lib -lnetcdff -L/opt/software/rocky9/eb/software/bzip2/1.0.8-GCCcore-12.3.0/lib64 -L/opt/software/rocky9/eb/software/bzip2/1.0.8-GCCcore-12.3.0/lib -L/opt/software/rocky9/eb/software/netCDF/4.9.2-gompi-2023a/lib64 -L/opt/software/rocky9/eb/software/netCDF/4.9.2-gompi-2023a/lib -L/opt/software/rocky9/eb/software/GCCcore/12.3.0/lib64 -L/opt/software/rocky9/eb/software/GCCcore/12.3.0/lib -lnetcdf -lnetcdf -lm -lm -lpthread src/mod_vars.F90 -o _build/mod_vars.o

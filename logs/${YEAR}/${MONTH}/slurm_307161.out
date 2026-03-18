@@ -1,0 +1,4 @@
+rm -rf *.o *.mod *.out *.dSYM *.csv fort.* *.x *.in
+rm -rf _build
+test -s runtest.sh && rm runtest.sh || true
+test -s runtracmass && rm runtracmass || true
