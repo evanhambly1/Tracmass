@@ -173,20 +173,20 @@ done,
       ! Tracer name (description)
       tracername = 'mld','q','temp','sal','fw_flux','sw_flux'
       ! Tracer unit (description)
-      tracerunit = 'm','wm-2','degC','gkg-1',kgm-2s-1','wm-2'
+      tracerunit = 'm','wm-2','degC','gkg-1','kgm-2s-1','wm-2'
 
       ! Name of the variable in the netcdf (if it's read)
-      tracervarname = 'somxl010','hfds','thetao_con','so_abs','sowaflup',rsdo'
+      tracervarname = 'somxl010','hfds','thetao_con','so_abs','sowaflup','rsdo'
 
       ! Action (read or compute)
       traceraction = 'read','read','read','read','read','read'
 
       ! Minimum and maximum value of the binning
-      tracermin = 0,-1000,-5,0,-1000,-1000
-      tracermax = 5000,100,35,40,1000,1000
+      tracermin = 0,-1000,-5,0,-0.01,0
+      tracermax = 5000,100,35,40,0.01,1000
 
       ! Dimension of the tracer
-      tracerdimension = 2D,2D,3D,3D,
+      tracerdimension = 2D,2D,3D,3D,2D,3D
 /
 
 &INIT_TRACERS_SEEDING

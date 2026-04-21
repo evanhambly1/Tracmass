@@ -1,0 +1,81 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"GCC/12.3.0"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "GCC/12.3.0"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Lmod has detected the following error: The following module(s) are unknown:
+"OpenMPI/4.1.5-GCC-12.3.0"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "OpenMPI/4.1.5-GCC-12.3.0"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Lmod has detected the following error: The following module(s) are unknown:
+"HDF5/1.14.0-gompi-2023a"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "HDF5/1.14.0-gompi-2023a"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Lmod has detected the following error: The following module(s) are unknown:
+"netCDF/4.9.2-gompi-2023a"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "netCDF/4.9.2-gompi-2023a"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Lmod has detected the following error: The following module(s) are unknown:
+"netCDF-Fortran/4.6.1-gompi-2023a"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "netCDF-Fortran/4.6.1-gompi-2023a"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+rm -rf *.o *.mod *.out *.dSYM *.csv fort.* *.x *.in
+rm -rf _build
+test -s runtest.sh && rm runtest.sh || true
+test -s runtracmass && rm runtracmass || true
+mkdir -p _build
+make: nf-config: No such file or directory
+make: nf-config: No such file or directory
+gfortran -g -O3 -fbacktrace -fbounds-check -Wall -Wno-maybe-uninitialized -Wno-unused-dummy-argument -ftree-vectorize -funroll-loops -ffast-math -c -Dproject_1m_RAPID_new/eORCA1/eORCA1_files/1995 -Dw_3dim        -DPROJECT_NAME=\'project_1m_RAPID_new/eORCA1/eORCA1_files/1995\' -DCASE_NAME=\'eORCA1_06_1995_25_1m\'   src/mod_vars.F90 -o _build/mod_vars.o
+make: nf-config: No such file or directory
+make: nf-config: No such file or directory
+gfortran -g -O3 -fbacktrace -fbounds-check -Wall -Wno-maybe-uninitialized -Wno-unused-dummy-argument -ftree-vectorize -funroll-loops -ffast-math -c -Dproject_1m_RAPID_new/eORCA1/eORCA1_files/1995 -Dw_3dim        -DPROJECT_NAME=\'project_1m_RAPID_new/eORCA1/eORCA1_files/1995\' -DCASE_NAME=\'eORCA1_06_1995_25_1m\'   src/mod_subdomain.F90 -o _build/mod_subdomain.o
+make: nf-config: No such file or directory
+make: nf-config: No such file or directory
+gfortran -g -O3 -fbacktrace -fbounds-check -Wall -Wno-maybe-uninitialized -Wno-unused-dummy-argument -ftree-vectorize -funroll-loops -ffast-math -c -Dproject_1m_RAPID_new/eORCA1/eORCA1_files/1995 -Dw_3dim        -DPROJECT_NAME=\'project_1m_RAPID_new/eORCA1/eORCA1_files/1995\' -DCASE_NAME=\'eORCA1_06_1995_25_1m\'   src/mod_getfile.F90 -o _build/mod_getfile.o
+src/mod_getfile.F90:24:7:
+
+   24 |   USE netcdf
+      |       1
+Fatal Error: Cannot open module file 'netcdf.mod' for reading at (1): No such file or directory
+compilation terminated.
+make: *** [Makefile:110: _build/mod_getfile.o] Error 1

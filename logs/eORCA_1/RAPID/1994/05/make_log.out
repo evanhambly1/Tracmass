@@ -1,13 +1,13 @@
 mkdir -p _build
 make: nf-config: No such file or directory
 make: nf-config: No such file or directory
-gfortran -g -O3 -fbacktrace -fbounds-check -Wall -Wno-maybe-uninitialized -Wno-unused-dummy-argument -ftree-vectorize -funroll-loops -ffast-math -c -Dproject_1m_RAPID/eORCA1/eORCA1_files/1994 -Dw_3dim        -DPROJECT_NAME=\'project_1m_RAPID/eORCA1/eORCA1_files/1994\' -DCASE_NAME=\'eORCA1_05_1994_25_1m\'   src/mod_vars.F90 -o _build/mod_vars.o
+gfortran -g -O3 -fbacktrace -fbounds-check -Wall -Wno-maybe-uninitialized -Wno-unused-dummy-argument -ftree-vectorize -funroll-loops -ffast-math -c -Dproject_1m_RAPID_new/eORCA1/eORCA1_files/1994 -Dw_3dim        -DPROJECT_NAME=\'project_1m_RAPID_new/eORCA1/eORCA1_files/1994\' -DCASE_NAME=\'eORCA1_05_1994_25_1m\'   src/mod_vars.F90 -o _build/mod_vars.o
 make: nf-config: No such file or directory
 make: nf-config: No such file or directory
-gfortran -g -O3 -fbacktrace -fbounds-check -Wall -Wno-maybe-uninitialized -Wno-unused-dummy-argument -ftree-vectorize -funroll-loops -ffast-math -c -Dproject_1m_RAPID/eORCA1/eORCA1_files/1994 -Dw_3dim        -DPROJECT_NAME=\'project_1m_RAPID/eORCA1/eORCA1_files/1994\' -DCASE_NAME=\'eORCA1_05_1994_25_1m\'   src/mod_subdomain.F90 -o _build/mod_subdomain.o
+gfortran -g -O3 -fbacktrace -fbounds-check -Wall -Wno-maybe-uninitialized -Wno-unused-dummy-argument -ftree-vectorize -funroll-loops -ffast-math -c -Dproject_1m_RAPID_new/eORCA1/eORCA1_files/1994 -Dw_3dim        -DPROJECT_NAME=\'project_1m_RAPID_new/eORCA1/eORCA1_files/1994\' -DCASE_NAME=\'eORCA1_05_1994_25_1m\'   src/mod_subdomain.F90 -o _build/mod_subdomain.o
 make: nf-config: No such file or directory
 make: nf-config: No such file or directory
-gfortran -g -O3 -fbacktrace -fbounds-check -Wall -Wno-maybe-uninitialized -Wno-unused-dummy-argument -ftree-vectorize -funroll-loops -ffast-math -c -Dproject_1m_RAPID/eORCA1/eORCA1_files/1994 -Dw_3dim        -DPROJECT_NAME=\'project_1m_RAPID/eORCA1/eORCA1_files/1994\' -DCASE_NAME=\'eORCA1_05_1994_25_1m\'   src/mod_getfile.F90 -o _build/mod_getfile.o
+gfortran -g -O3 -fbacktrace -fbounds-check -Wall -Wno-maybe-uninitialized -Wno-unused-dummy-argument -ftree-vectorize -funroll-loops -ffast-math -c -Dproject_1m_RAPID_new/eORCA1/eORCA1_files/1994 -Dw_3dim        -DPROJECT_NAME=\'project_1m_RAPID_new/eORCA1/eORCA1_files/1994\' -DCASE_NAME=\'eORCA1_05_1994_25_1m\'   src/mod_getfile.F90 -o _build/mod_getfile.o
 src/mod_getfile.F90:24:7:
 
    24 |   USE netcdf

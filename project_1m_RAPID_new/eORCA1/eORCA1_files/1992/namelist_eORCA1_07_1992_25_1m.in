@@ -177,8 +177,8 @@
       traceraction = 'read','read','read','read','read','read'
 
       ! Minimum and maximum value of the binning
-      tracermin = 0,-1000,-5,0,-1000,-1000
-      tracermax = 5000,1000,35,40,1000,1000
+      tracermin = 0,-1000,-5,0,-0.01,0
+      tracermax = 5000,1000,35,40,0.01,1000
 
       ! Dimension of the tracer
       tracerdimension = 2D,2D,3D,3D,2D,3D

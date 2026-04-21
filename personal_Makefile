@@ -4,8 +4,8 @@
 YEAR    ?= 1990
 MONTH   ?= 01
 # Project and case definition
-PROJECT	          = project_1m_RAPID/eORCA1/eORCA1_files/$(YEAR)
-CASE              = eORCA1_$(MONTH)_$(YEAR)_25_1m
+PROJECT	          = project_1m_RAPID_new/eORCA025/eORCA025_files/$(YEAR)
+CASE              = eORCA025_$(MONTH)_$(YEAR)_25_1m
 RUNFILE	          = runtracmass
 ARCH              = jasmin-gnu
 NETCDFLIBS        = jasmin-gnu

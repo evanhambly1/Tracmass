@@ -5,7 +5,7 @@
 #SBATCH --account=hpcuser
 #SBATCH --partition=compute
 #SBATCH --qos=batch
-#SBATCH --exclude=compute023,compute037,compute041,compute042,compute043
+#SBATCH --exclude=compute017,compute018,compute019,compute021,compute023,compute037,compute041,compute042,compute043
 
 source /etc/profile.d/modules.sh
 module load GCC/12.3.0
@@ -21,7 +21,7 @@ mkdir -p $BUILDDIR
 # Copy everything needed to compile
 cp -r $SRCDIR/src $BUILDDIR/
 cp $SRCDIR/personal_Makefile $BUILDDIR/Makefile
-cp -r $SRCDIR/project_1m_RAPID $BUILDDIR/
+cp -r $SRCDIR/project_1m_RAPID_new $BUILDDIR/
 cp -r $SRCDIR/projects $BUILDDIR/
 
 cd $BUILDDIR
@@ -30,7 +30,7 @@ mkdir -p ${SRCDIR}/logs/eORCA_1/RAPID/${YEAR}/${MONTH}
 make clean
 make YEAR=$YEAR MONTH=$MONTH 2>&1 | tee ${SRCDIR}/logs/eORCA_1/RAPID/${YEAR}/${MONTH}/make_log.out || { echo "Compilation failed"; exit 1; }
 
-export TRMPROJDIR=${BUILDDIR}/project_1m_RAPID/eORCA1/eORCA1_files/${YEAR}
+export TRMPROJDIR=${BUILDDIR}/project_1m_RAPID_new/eORCA1/eORCA1_files/${YEAR}
 ./runtracmass &> ${SRCDIR}/logs/eORCA_1/RAPID/${YEAR}/${MONTH}/runtracmass_log.out
 
 # Cleanup

@@ -2,29 +2,31 @@
               TRACMASS Lagrangian off-line particle tracking 
  ===============================================================================
  
- Start date  : 2026-04-17
- Start time  : 19:53:55
+ Start date  : 2026-04-21
+ Start time  : 14:56:51
  
  -------------------------------------------------------------------------------
  
  Model information:
- Project code  : project_1m_RAPID/eORCA1
+ Project code  : project_1m_RAPID_new/eO
  Case name     : eORCA1_10_1991_25_1m
- Namelist file : /tmp/tracmass_1991_10_2965730/project_1m_RAPID/eORCA1/eORCA1_files/1991/namelist_eORCA1_10_1991_25_1m.in
+ Namelist file : /tmp/tracmass_1991_10_2881059/project_1m_RAPID_new/eORCA1/eORCA1_files/1991/namelist_eORCA1_10_1991_25_1m.in
  
  -------------------------------------------------------------------------------
  
  Configuration options:
   - Forward in time (nff = 1)
   - A subdomain has been choosen
-      i index:   185 - 296  
-      j index:   197 - 311  
+      i index:   195 - 305  
+      j index:   219 - 319  
   - Three-dimensional trajectories (vertical fluxes computed)
   - Evaluate the value of these tracers along the trajectories:
      1- mld (m) 
      2- q (wm-2) 
      3- temp (degC) 
      4- sal (gkg-1) 
+     5- fw_flux (kgm-2s-1) 
+     6- sw_flux (wm-2) 
  
  -------------------------------------------------------------------------------
  
